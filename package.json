@@ -2,28 +2,28 @@
     "name": "mvc-tech-blog",
     "version": "1.0.0",
     "description": "",
-    "main": "server.js",
+    "main": "app.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "node server.js",
-      "seed": "node seeds/seed.js",
-      "watch": "nodemon server.js"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "seed": "node seeds/seed.js",
+        "watch": "nodemon server.js"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/angelg12345/week14techblog"
+        "type": "git",
+        "url": "git+https://github.com/angelg12345/week14techblog"
     },
     "dependencies": {
-      "bcrypt": "^5.1.0",
-      "bootstrap": "^5.2.3",
-      "connect-session-sequelize": "^7.1.6",
-      "dotenv": "^16.0.3",
-      "express": "^4.18.2",
-      "express-handlebars": "^7.0.7",
-      "express-session": "^1.17.3",
-      "jest": "^29.5.0",
-      "mysql2": "^3.3.0",
-      "nodemon": "^2.0.22",
-      "sequelize": "^6.31.1"
+        "bcrypt": "^5.1.0",
+        "bootstrap": "^5.2.3",
+        "connect-session-sequelize": "^7.1.6",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "express-handlebars": "^7.1.2",
+        "express-session": "^1.17.3",
+        "jest": "^29.5.0",
+        "mysql2": "^3.3.0",
+        "nodemon": "^2.0.22",
+        "sequelize": "^6.31.1"
     }
-  }
+}

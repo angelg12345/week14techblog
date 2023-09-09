@@ -4,6 +4,10 @@ const session = require('express-session');
 
 const app = express();
 
+
+const helpers = {
+}
+const hbs = exphbs.create({ helpers })
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
