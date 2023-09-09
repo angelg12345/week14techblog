@@ -34,7 +34,14 @@ module.exports = (sequelize, DataTypes) => {
                 len: [8],
             }
         }
-    }, {
+    },  {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: "post",
+      },
+    {
         hooks: {
             beforeCreate: async (user) => {
                 const hashedPassword = await bcrypt.hash(user.password, 10);
