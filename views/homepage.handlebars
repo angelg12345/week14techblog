@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The Blog Spot</title>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to The Blog Spot </h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Latest Posts</h2>
+            <ul>
+                {{#each posts}}
+                    <li>
+                        <h3>{{title}}</h3>
+                        <p>{{description}}</p>
+                        <p>Created on: {{formatDate date_created}}</p>
+                    </li>
+                {{/each}}
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Tech Blog</p>
+    </footer>
+</body>
+
+</html>

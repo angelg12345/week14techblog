@@ -1,4 +1,6 @@
+
 const { Post, User, Comment } = require("../models");
+const router = require("express").Router();
 
 const postController = {
     async getAllPosts(req, res) {
@@ -102,5 +104,5 @@ const postController = {
         }
     }
 };
-
-module.exports = postController;
+module.exports= postController
+module.exports = router;
