@@ -40,13 +40,4 @@ Post.init(
   }
 );
 
-Post.createPost = async (postData) => {
-    try {
-        const post = await Post.create(postData);
-        return post;
-    } catch (error) {
-        console.error(error);
-        throw new Error('Unable to create post')
-    }
-};
 module.exports = Post;

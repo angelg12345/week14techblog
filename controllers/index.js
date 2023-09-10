@@ -2,21 +2,25 @@ const express = require('express');
 const router = express.Router();
 
 // Import controllers
+const CommentsRoutes = require('./CommentsRoutes');
+const DashboardRoutes = require('./dashboardRoute');
+const HomeRoutes = require('./homeRoutes');
+const PostController = require('./Post');
 const UserController = require('./UserController');
-const PostController = require('./PostController');
-const CommentController = require('./CommentController');
-
-// User routes
-router.post('/users', UserController.createUser);
-
-
-// Post routes
-router.post('/posts', PostController.createPost);
-router.get('/posts', PostController.getPosts);
-
 
 // Comment routes
-router.post('/posts/:postID/comments', CommentController.createComment);
+router.use('/comments', CommentsRoutes);
 
+// Dashboard routes
+router.use('/dashboard', DashboardRoutes);
+
+// Home routes
+router.use('/', HomeRoutes);
+
+// Post routes
+router.use('/posts', PostController);
+
+// User routes
+router.use('/users', UserController);
 
 module.exports = router;

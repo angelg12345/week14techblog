@@ -30,7 +30,7 @@ app.use(
 );
 
 
-const mainRoutes = require('./routes/main');
+const mainRoutes = require('./controllers/index.js');
 app.use('/', mainRoutes);
 
 const PORT = process.env.PORT || 4000;
