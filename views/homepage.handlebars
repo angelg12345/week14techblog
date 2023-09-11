@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Blog Spot</title>
+ 
 </head>
 
 <body>
@@ -17,11 +18,13 @@
             <h2>Latest Posts</h2>
             <ul>
               {{#each posts}}
+<div class="post-container">
     <li>
         <h3>{{dataValues.title}}</h3>
         <p>{{dataValues.description}}</p>
         <p>Created on: {{dataValues.date_created}}</p>
     </li>
+</div>
 {{/each}}
 
         </section>
