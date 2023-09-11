@@ -17,15 +17,14 @@
         <section>
             <h2>Latest Posts</h2>
             <ul>
-              {{#each posts}}
-<div class="post-container">
-    <li>
-        <h3>{{dataValues.title}}</h3>
-        <p>{{dataValues.description}}</p>
-        <p>Created on: {{dataValues.date_created}}</p>
-    </li>
-</div>
+            {{#each posts}}
+  <div class="post-container">
+    <h3>{{dataValues.title}}</h3>
+    <p>{{dataValues.description}}</p>
+    <p><span class="date">Created on: {{dataValues.date_created}}</span></p>
+  </div>
 {{/each}}
+
 
         </section>
     </main>

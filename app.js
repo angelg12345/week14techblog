@@ -12,18 +12,6 @@ const helpers = require("./utils/helpers")
 
 
 const hbs = exphbs.create({ helpers, });
-
-// Set the view engine to handlebars
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
-
-app.set('views', path.join(__dirname, 'views'));
-
-app.use(express.static('public'));
-
-// Set up session middleware
-app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
 app.use(
   session({
     secret: 'this-is-mykey',
@@ -31,6 +19,20 @@ app.use(
     saveUninitialized: true
   })
 );
+
+// Set the view engine to handlebars
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.json());
+app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, "public")));
+// Set up session middleware
+
+
+
+
 app.use(routes)
 
 

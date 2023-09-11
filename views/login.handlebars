@@ -1,7 +1,7 @@
 
   <h1>Login</h1>
-  
-  <form action="/login" method="POST">
+  <div class="login-container">
+  <form id="login-form" action="/login" method="POST">
     <div class="form-group">
       <label for="username">Username</label>
       <input type="text" id="username" name="username" required>
@@ -12,5 +12,23 @@
     </div>
     <button type="submit">Login</button>
   </form>
-  
-  <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+  </div>
+<!-- register.handlebars -->
+<h1>Signup</h1>
+  <div class="register-container"></div>
+<form action="/signup" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" required>
+    <br>
+    <button type="submit">Register</button>
+</form>
+ </div>
+
+<script src="/public/login.js"></script>
+
