@@ -6,7 +6,8 @@ router.get('/', async (req, res) => {
         const posts = await Post.findAll({
             include: [{ model: User, as: 'user'}, { model: Comment, as: 'comments'}],
         });
-        res.render('homepage', { posts });
+        console.log(posts);
+        res.render('homepage', { posts: posts });
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Internal Server Error'});

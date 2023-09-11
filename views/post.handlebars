@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Blog Spot</title>
+    <title> The Blog Spot</title>
 </head>
 
 <body>
@@ -14,16 +14,12 @@
 
     <main>
         <section>
-            <h2>Latest Posts</h2>
-            <ul>
-              {{#each posts}}
-    <li>
-        <h3>{{dataValues.title}}</h3>
-        <p>{{dataValues.description}}</p>
-        <p>Created on: {{dataValues.date_created}}</p>
-    </li>
-{{/each}}
-
+            <article>
+                <h2>{{post.title}}</h2>
+                <p>Created on: {{}}</p>
+                <p>{{post.description}}</p>
+                <p>Author: {{post.name}}</p>
+            </article>
         </section>
     </main>
 
